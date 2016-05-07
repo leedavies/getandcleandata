@@ -157,7 +157,6 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     library(dplyr)
     
     # read all the data from the files
-    #uci_dir <- "./data/UCI HAR Dataset"
     p("Reading Features")
     features <- readFeatureFile(uci_dir)
     p("Reading Labels")
