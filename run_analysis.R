@@ -205,10 +205,10 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
 writeAverageForVariableAndSubject <- function(file_name = "UCI_HAR_Dataset_Tidy_DataSet.txt", uci_dir = "./data/UCI HAR Dataset")
 {
     full_path = paste(uci_dir, file_name, sep= "/")
-    sensor_data_mean_std <- tidyUCIHARDataSet()
-    sensor_avg_by_act_sub = ddply(sensor_data_mean_std, c("Subject","Activity"), numcolwise(mean))
-    p("Saving clean data to:", full_path)
-    write.table(sensor_avg_by_act_sub, file = full_path, row.name=FALSE) 
+    tidy_sensor_data <- tidyUCIHARDataSet()
+    sensor_avg_sub_act = ddply(tidy_sensor_data, c("Subject","Activity"), numcolwise(mean))
+    p("Saving tidy data to:", full_path)
+    write.table(sensor_avg_sub_act, file = full_path, row.name=FALSE) 
 }
 
 
