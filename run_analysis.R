@@ -1,8 +1,8 @@
-# Function to print out information from teh script
+# Function to print out information from the script
 # As loading the data can take some time we need to give the user
 # a status upate that the script is working.
 p <- function(...) { 
-    cat( ..., "\n") 
+    cat(..., "\n") 
 } 
 
 # Function to read the feature file.
