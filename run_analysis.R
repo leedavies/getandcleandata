@@ -27,26 +27,18 @@ readActivityLabels <- function(uci_dir)
     read.table(activity_labels_file, col.names = c("activityid", "activity"))
 }
 
-# Function to read the test subject file.
-# parameters:
-#     uci_dir - root directory that contains the test/subject_test.txt file.
-# return:
-#     data.frame that contains the contents of the test/subject_test.txt file.
-readSubjectTest <- function(uci_dir)
-{
-    subject_test_file <- paste(uci_dir, "test/subject_test.txt", sep = "/")
-    read.table(subject_test_file)
-}
-
 # Function to read the training subject file.
 # parameters:
 #     uci_dir - root directory that contains the train/subject_train.txt file.
+#     type - the type of file (either train or test), the type is used to find the directory and file name
+#     of the text file where the data exists.
 # return:
 #     data.frame that contains the contents of the train/subject_train.txt file.
-readSubjectTraining <- function(uci_dir)
+readSubjects <- function(uci_dir, type)
 {
-    subject_train_file <- paste(uci_dir, "train/subject_train.txt", sep = "/")
-    read.table(subject_train_file)
+    subject_file = paste(type, "/subject_", type, ".txt", sep = "")
+    subject_full_path <- paste(uci_dir, subject_file, sep = "/")
+    read.table(subject_full_path)
 }
 
 # Function to read the information from a file using the read.table command
@@ -123,6 +115,38 @@ updateNames <- function(names)
     #tolower(names)
 }
 
+# Function to read the data for the specific type (either training or test)
+# parameters:
+#      uci_dir - root directory for the files
+#      type - whether the files are train or test files, note that the type is used to find the files by
+#      setting the type as the directory under root and appending the type to the end of the file for the x, y
+#      and subjects. For example passing the type as "test" looks to read the data from the following files 
+#             "test/x_test.txt", 
+#             "test/y_test.txt" 
+#             "test/subject_test.txt"
+# return:
+#      data.frame that contains the merged x and y files with the subject
+readData <- function(uci_dir, type) {
+    
+    x_file = paste(type, "/x_", type, ".txt", sep = "")
+    y_file = paste(type, "/y_", type, ".txt", sep = "")
+    
+    #read the  data
+    p(paste("Getting", type, "DataSet", sep = " "))
+    p(paste("    Reading X", type, "DataSet", sep = " "))
+    x_test <- readTableFromPath(uci_dir, x_file)
+    
+    p(paste("    Reading Y", type, "DataSet", sep = " "))
+    y_test <- readTableFromPath(uci_dir, y_file)
+    
+    p(paste("    Reading", type, "Subjects", sep = " "))
+    subject_test <- readSubjects(uci_dir, type)
+    
+    # create the test sensor data
+    p(paste("    Binding", type, "Sensor Data...", ssep = " "))
+    test_sensor_data <- bindSensorData(x_test, y_test, subject_test)
+}
+
 # Function to tidy the UCI HAR DataSet.
 # parameters:
 #     uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
@@ -139,35 +163,11 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     p("Reading Labels")
     activity_labels <- readActivityLables(uci_dir)
     
-    # read the trainging data
-    p("Reading Training DataSet")
-    p("    Reading X Training Subjects")
-    x_train <- readTableFromPath(uci_dir, "train/x_train.txt")
+    # read the train data from the files
+    train_sensor_data <- readData(uci_dir, "train")
     
-    p("    Reading Y Training Subjects")
-    y_train <- readTableFromPath(uci_dir, "train/y_train.txt")
-    
-    p("    Reading Training Subjects")
-    subject_train <- readSubjectTraining(uci_dir)
-   
-    # create the training sensor data
-    p("    Binding Training Sensor Data...")
-    train_sensor_data <- bindSensorData(x_train, y_train, subject_train)
-    
-    #read the test data
-    p("Getting Test DataSet")
-    p("    Reading X Test Subjects")
-    x_test <- readTableFromPath(uci_dir, "test/x_test.txt")
-    
-    p("    Reading Y Test Subjects")
-    y_test <- readTableFromPath(uci_dir, "test/y_test.txt")
-    
-    p("    Reading Test Subjects")
-    subject_test <- readSubjectTest(uci_dir)
-    
-    # create the test sensor data
-    p("    Binding Test Sensor Data...")
-    test_sensor_data <- bindSensorData(x_test, y_test, subject_test)
+    # read the test data from the files
+    test_sensor_data <- readData(uci_dir, "test")
     
     # merge the full set of sensor data
     p("Merging Training and Test Sensor Data")
