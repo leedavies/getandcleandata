@@ -36,7 +36,7 @@ readActivityLabels <- function(uci_dir)
 #     data.frame that contains the contents of the train/subject_train.txt file.
 readSubjects <- function(uci_dir, type)
 {
-    subject_file = paste(type, "/subject_", type, ".txt", sep = "")
+    subject_file = paste0(type, "/subject_", type, ".txt")
     subject_full_path <- paste(uci_dir, subject_file, sep = "/")
     read.table(subject_full_path)
 }
@@ -128,8 +128,8 @@ updateNames <- function(names)
 #      data.frame that contains the merged x and y files with the subject
 readData <- function(uci_dir, type) {
     
-    x_file = paste(type, "/x_", type, ".txt", sep = "")
-    y_file = paste(type, "/y_", type, ".txt", sep = "")
+    x_file = paste0(type, "/x_", type, ".txt")
+    y_file = paste0(type, "/y_", type, ".txt")
     
     #read the  data
     p(paste("Getting", type, "DataSet", sep = " "))
