@@ -177,9 +177,7 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     
     # add two additional columns for the subject and activity Id
     sensor_labels <- rbind(features, "subject", "activityid",  make.row.names = TRUE)
-    sensor_labels <- sensor_labels$featurename
-    
-    names(sensor_data) <- sensor_labels 
+    names(sensor_data) <- sensor_labels$featurename
     
     # based on the names extract only those that have mean and std
     p("Extracting mean and standard deviation values")
