@@ -13,7 +13,7 @@ p <- function(...) {
 readFeatureFile <- function(uci_dir)
 {
     feature_file <- paste(uci_dir, "features.txt", sep = "/") 
-    read.table(feature_file, colClasses = c("character"))
+    read.table(feature_file, col.names = c("featureid", "featurename"), colClasses = c("character"))
 }
 
 # Function to read the activity label file.
@@ -177,7 +177,7 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     
     # add two additional columns for the subject and activity Id
     sensor_labels <- rbind(features, "subject", "activityid",  make.row.names = TRUE)
-    sensor_labels <- sensor_labels[,2]
+    sensor_labels <- sensor_labels$featurename
     
     names(sensor_data) <- sensor_labels 
     
