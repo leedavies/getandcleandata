@@ -159,7 +159,7 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     # read all the data from the files
     p("Reading Features")
     features <- readFeatureFile(uci_dir)
-    p("Reading Labels")
+    p("Reading Activity Labels")
     activity_labels <- readActivityLables(uci_dir)
     
     # read the train data from the files
@@ -173,7 +173,7 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     sensor_data <- rbind(train_sensor_data, test_sensor_data)
     
     # update the labels for the sensors
-    p("Update Columns Labels for Sensor Data")
+    p("Updating Columns Labels for Sensor Data")
     
     # add two additional columns for the subject and activity Id
     sensor_labels <- rbind(features, "subject", "activityid",  make.row.names = TRUE)
@@ -182,17 +182,18 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     names(sensor_data) <- sensor_labels 
     
     # based on the names extract only those that have mean and std
-    p("Extract columns with Mean and Standard Deviation Values")
+    p("Extracting mean and standard deviation values")
     sensor_data_mean_std <- sensor_data[,grepl("mean|std|subject|activityid", names(sensor_data))]
     
-    # update the labels
-    p("Make tidy labels")
+    p("Joining activity names to data")
     # join on the activity id to get the activiy names
     sensor_data_mean_std <- join(sensor_data_mean_std, activity_labels, by = "activityid", match = "first") 
     
     #remove the activity id
     sensor_data_mean_std <- select(sensor_data_mean_std, -activityid)
     
+    # update the labels
+    p("Making tidy labels")
     # update the names
     names(sensor_data_mean_std) <- updateNames(names(sensor_data_mean_std))
     
