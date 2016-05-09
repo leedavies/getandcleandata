@@ -73,85 +73,85 @@ The data contains the mean and standard deviations for the activities for each s
 
 The resusting data set contains the following variables.
 
-Variable: time-body-acceleration-mean-x Type: num
-Variable: time-body-acceleration-mean-y Type: num               
-Variable: time-body-acceleration-mean-z Type: num                          
-Variable: time-body-acceleration-standarddeviation-x Type: num                
-Variable: time-body-acceleration-standarddeviation-y Type: num                 
-Variable: time-body-acceleration-standarddeviation-z Type: num                
-Variable: time-gravity-acceleration-mean-x Type: num                           
-Variable: time-gravity-acceleration-mean-y Type: num                          
-Variable: time-gravity-acceleration-mean-z Type: num                           
-Variable: time-gravity-acceleration-standarddeviation-x Type: num             
-Variable: time-gravity-acceleration-standarddeviation-y Type: num              
-Variable: time-gravity-acceleration-standarddeviation-z Type: num             
-Variable: time-body-accelerationjerk-mean-x Type: num                          
-Variable: time-body-accelerationjerk-mean-y Type: num                         
-Variable: time-body-accelerationjerk-mean-z Type: num                          
-Variable: time-body-accelerationjerk-standarddeviation-x Type: num            
-Variable: time-body-accelerationjerk-standarddeviation-y Type: num             
-Variable: time-body-accelerationjerk-standarddeviation-z Type: num            
-Variable: time-body-gyro-mean-x Type: num                                      
-Variable: time-body-gyro-mean-y Type: num                                     
-Variable: time-body-gyro-mean-z Type: num                                      
-Variable: time-body-gyro-standarddeviation-x Type: num                        
-Variable: time-body-gyro-standarddeviation-y Type: num                         
-Variable: time-body-gyro-standarddeviation-z Type: num                        
-Variable: time-body-gyrojerk-mean-x Type: num                                 
-Variable: time-body-gyrojerk-mean-y Type: num                                
-Variable: time-body-gyrojerk-mean-z Type: num                                 
-Variable: time-body-gyrojerk-standarddeviation-x Type: num                   
-Variable: time-body-gyrojerk-standarddeviation-y Type: num                    
-Variable: time-body-gyrojerk-standarddeviation-z Type: num                   
-Variable: time-body-accelerationmagnitude-mean Type: num                       
-Variable: time-body-accelerationmagnitude-standarddeviation Type: num         
-Variable: time-gravity-accelerationmagnitude-mean Type: num                    
-Variable: time-gravity-accelerationmagnitude-standarddeviation Type: num      
-Variable: time-body-accelerationjerkmagnitude-mean Type: num                   
-Variable: time-body-accelerationjerkmagnitude-standarddeviation Type: num     
-Variable: time-body-gyromagnitude-mean Type: num                               
-Variable: time-body-gyromagnitude-standarddeviation Type: num                 
-Variable: time-body-gyrojerk-magnitude-mean Type: num                          
-Variable: time-body-gyrojerk-magnitude-standarddeviation Type: num            
-Variable: frequency-body-acceleration-mean-x Type: num                         
-Variable: frequency-body-acceleration-mean-y Type: num                        
-Variable: frequency-body-acceleration-mean-z Type: num                         
-Variable: frequency-body-acceleration-standarddeviation-x Type: num           
-Variable: frequency-body-acceleration-standarddeviation-y Type: num            
-Variable: frequency-body-acceleration-standarddeviation-z Type: num           
-Variable: frequency-body-acceleration-meanfrequency-x Type: num                
-Variable: frequency-body-acceleration-meanfrequency-y Type: num               
-Variable: frequency-body-acceleration-meanfrequency-z Type: num                
-Variable: frequency-body-accelerationjerk-mean-x Type: num                    
-Variable: frequency-body-accelerationjerk-mean-y Type: num                     
-Variable: frequency-body-accelerationjerk-mean-z Type: num                    
-Variable: frequency-body-accelerationjerk-standarddeviation-x Type: num        
-Variable: frequency-body-accelerationjerk-standarddeviation-y Type: num       
-Variable: frequency-body-accelerationjerk-standarddeviation-z Type: num        
-Variable: frequency-body-accelerationjerk-meanfrequency-x Type: num           
-Variable: frequency-body-accelerationjerk-meanfrequency-y Type: num            
-Variable: frequency-body-accelerationjerk-meanfrequency-z Type: num           
-Variable: frequency-body-gyro-mean-x Type: num                                 
-Variable: frequency-body-gyro-mean-y Type: num                                
-Variable: frequency-body-gyro-mean-z Type: num                                 
-Variable: frequency-body-gyro-standarddeviation-x Type: num                   
-Variable: frequency-body-gyro-standarddeviation-y Type: num                    
-Variable: frequency-body-gyro-standarddeviation-z Type: num                   
-Variable: frequency-body-gyro-meanfrequency-x Type: num                        
-Variable: frequency-body-gyro-meanfrequency-y Type: num                       
-Variable: frequency-body-gyro-meanfrequency-z Type: num                        
-Variable: frequency-body-accelerationmagnitude-mean Type: num                 
-Variable: frequency-body-accelerationmagnitude-standarddeviation Type: num     
-Variable: frequency-body-accelerationmagnitude-meanfrequency- Type: num       
-Variable: frequency-body-accelerationjerkmagnitude-mean Type: num              
-Variable: frequency-body-accelerationjerkmagnitude-standarddeviation Type: num
-Variable: frequency-body-accelerationjerkmagnitude-meanfrequency- Type: num    
-Variable: frequency-body-gyromagnitude-mean Type: num                         
-Variable: frequency-body-gyromagnitude-standarddeviation Type: num             
-Variable: frequency-body-gyromagnitude-meanfrequency- Type: num               
-Variable: frequency-body-gyrojerk-magnitude-mean Type: num                     
-Variable: frequency-body-gyrojerk-magnitude-standarddeviation Type: num       
-Variable: frequency-body-gyrojerk-magnitude-meanfrequency- Type: num           
-Variable: subject Type: int                                                   
-Variable: activity Type:  Factor w/ 6 levels 1 WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+* Variable: time-body-acceleration-mean-x Type: num
+* Variable: time-body-acceleration-mean-y Type: num               
+* Variable: time-body-acceleration-mean-z Type: num                          
+* Variable: time-body-acceleration-standarddeviation-x Type: num                
+* Variable: time-body-acceleration-standarddeviation-y Type: num                 
+* Variable: time-body-acceleration-standarddeviation-z Type: num                
+* Variable: time-gravity-acceleration-mean-x Type: num                           
+* Variable: time-gravity-acceleration-mean-y Type: num                          
+* Variable: time-gravity-acceleration-mean-z Type: num                           
+* Variable: time-gravity-acceleration-standarddeviation-x Type: num             
+* Variable: time-gravity-acceleration-standarddeviation-y Type: num              
+* Variable: time-gravity-acceleration-standarddeviation-z Type: num             
+* Variable: time-body-accelerationjerk-mean-x Type: num                          
+* Variable: time-body-accelerationjerk-mean-y Type: num                         
+* Variable: time-body-accelerationjerk-mean-z Type: num                          
+* Variable: time-body-accelerationjerk-standarddeviation-x Type: num            
+* Variable: time-body-accelerationjerk-standarddeviation-y Type: num             
+* Variable: time-body-accelerationjerk-standarddeviation-z Type: num            
+* Variable: time-body-gyro-mean-x Type: num                                      
+* Variable: time-body-gyro-mean-y Type: num                                     
+* Variable: time-body-gyro-mean-z Type: num                                      
+* Variable: time-body-gyro-standarddeviation-x Type: num                        
+* Variable: time-body-gyro-standarddeviation-y Type: num                         
+* Variable: time-body-gyro-standarddeviation-z Type: num                        
+* Variable: time-body-gyrojerk-mean-x Type: num                                 
+* Variable: time-body-gyrojerk-mean-y Type: num                                
+* Variable: time-body-gyrojerk-mean-z Type: num                                 
+* Variable: time-body-gyrojerk-standarddeviation-x Type: num                   
+* Variable: time-body-gyrojerk-standarddeviation-y Type: num                    
+* Variable: time-body-gyrojerk-standarddeviation-z Type: num                   
+* Variable: time-body-accelerationmagnitude-mean Type: num                       
+* Variable: time-body-accelerationmagnitude-standarddeviation Type: num         
+* Variable: time-gravity-accelerationmagnitude-mean Type: num                    
+* Variable: time-gravity-accelerationmagnitude-standarddeviation Type: num      
+* Variable: time-body-accelerationjerkmagnitude-mean Type: num                   
+* Variable: time-body-accelerationjerkmagnitude-standarddeviation Type: num     
+* Variable: time-body-gyromagnitude-mean Type: num                               
+* Variable: time-body-gyromagnitude-standarddeviation Type: num                 
+* Variable: time-body-gyrojerk-magnitude-mean Type: num                          
+* Variable: time-body-gyrojerk-magnitude-standarddeviation Type: num            
+* Variable: frequency-body-acceleration-mean-x Type: num                         
+* Variable: frequency-body-acceleration-mean-y Type: num                        
+* Variable: frequency-body-acceleration-mean-z Type: num                         
+* Variable: frequency-body-acceleration-standarddeviation-x Type: num           
+* Variable: frequency-body-acceleration-standarddeviation-y Type: num            
+* Variable: frequency-body-acceleration-standarddeviation-z Type: num           
+* Variable: frequency-body-acceleration-meanfrequency-x Type: num                
+* Variable: frequency-body-acceleration-meanfrequency-y Type: num               
+* Variable: frequency-body-acceleration-meanfrequency-z Type: num                
+* Variable: frequency-body-accelerationjerk-mean-x Type: num                    
+* Variable: frequency-body-accelerationjerk-mean-y Type: num                     
+* Variable: frequency-body-accelerationjerk-mean-z Type: num                    
+* Variable: frequency-body-accelerationjerk-standarddeviation-x Type: num        
+* Variable: frequency-body-accelerationjerk-standarddeviation-y Type: num       
+* Variable: frequency-body-accelerationjerk-standarddeviation-z Type: num        
+* Variable: frequency-body-accelerationjerk-meanfrequency-x Type: num           
+* Variable: frequency-body-accelerationjerk-meanfrequency-y Type: num            
+* Variable: frequency-body-accelerationjerk-meanfrequency-z Type: num           
+* Variable: frequency-body-gyro-mean-x Type: num                                 
+* Variable: frequency-body-gyro-mean-y Type: num                                
+* Variable: frequency-body-gyro-mean-z Type: num                                 
+* Variable: frequency-body-gyro-standarddeviation-x Type: num                   
+* Variable: frequency-body-gyro-standarddeviation-y Type: num                    
+* Variable: frequency-body-gyro-standarddeviation-z Type: num                   
+* Variable: frequency-body-gyro-meanfrequency-x Type: num                        
+* Variable: frequency-body-gyro-meanfrequency-y Type: num                       
+* Variable: frequency-body-gyro-meanfrequency-z Type: num                        
+* Variable: frequency-body-accelerationmagnitude-mean Type: num                 
+* Variable: frequency-body-accelerationmagnitude-standarddeviation Type: num     
+* Variable: frequency-body-accelerationmagnitude-meanfrequency- Type: num       
+* Variable: frequency-body-accelerationjerkmagnitude-mean Type: num              
+* Variable: frequency-body-accelerationjerkmagnitude-standarddeviation Type: num
+* Variable: frequency-body-accelerationjerkmagnitude-meanfrequency- Type: num    
+* Variable: frequency-body-gyromagnitude-mean Type: num                         
+* Variable: frequency-body-gyromagnitude-standarddeviation Type: num             
+* Variable: frequency-body-gyromagnitude-meanfrequency- Type: num               
+* Variable: frequency-body-gyrojerk-magnitude-mean Type: num                     
+* Variable: frequency-body-gyrojerk-magnitude-standarddeviation Type: num       
+* Variable: frequency-body-gyrojerk-magnitude-meanfrequency- Type: num           
+* Variable: subject Type: int                                                   
+* Variable: activity Type:  Factor w/ 6 levels 1 WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
