@@ -22,9 +22,10 @@ You should create one R script called run_analysis.R that does the following.
 
 Repository Contents
 ===================
-* CodeBook.md - informaton on the raw data, the tidy data and the process to convert from the raw to the tidy data set.
+* CodeBook.md - information on the raw data, the tidy data and the process to convert from the raw to the tidy data set.
 * README.md - this file
 * run_analysis.R - the R script that will process the raw data into tidy data.
+* data/UCI HAR Dataset - dataset used in this project.
 
 Creating the tidy data set.
 ===========================

@@ -44,7 +44,7 @@ Notes:
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
 
-The origional files can be located at the following location:
+The original files can be located at the following location:
 <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>
 
@@ -68,7 +68,7 @@ For a more detailed description of the code see the following link.
 <a href="https://github.com/leedavies/getandcleandata/blob/master/README.md">README.md</a>
 
 ##Description of the variables in the tiny_data.txt file
-The script tidyUCIHARDataSet generates a data frame of 10299 obs. of 81 variables from the origional UCI Har Dataset.
+The script tidyUCIHARDataSet generates a data frame of 10299 obs. of 81 variables from the original UCI Har Dataset.
 The data contains the mean and standard deviations for the activities for each subject.
 
 The resusting data set contains the following variables.
