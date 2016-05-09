@@ -32,7 +32,7 @@ Creating the tidy data set.
 1. Clone this repository
 2. Load the run_analysis.R script file in RStudio
 3. Run the function tidyUCIHARDataSet() 
-4. To create the second independent tidy data file run the script writeAverageForVariableAndSubject()
+4. To create the second independent tidy data file run the function writeAverageForVariableAndSubject()
 
 Script Functions.
 =================
