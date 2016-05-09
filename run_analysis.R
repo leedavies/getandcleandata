@@ -106,13 +106,10 @@ updateNames <- function(names)
     # rename the subject and activityid fields
     names <- gsub('^subject', "Subject", names)
     names <- gsub('^activity', "Activity", names)
-    
-    # although the tidy data lectures says that 
-    # all field names should be lower case and no "." if I do that
-    # it makes it very difficult to distinguish one column from the next 
-    # so commenting out these lines.
-    #names <- gsub('\\.', "", names)
-    #tolower(names)
+    # convert all the "." seperators to "-"
+    names <- gsub('\\.', "-", names)
+    # lower case all the names
+    tolower(names)
 }
 
 # Function to read the data for the specific type (either training or test)
@@ -206,9 +203,10 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
 #     uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
 writeAverageForVariableAndSubject <- function(file_name = "UCI_HAR_Dataset_Tidy_DataSet.txt", uci_dir = "./data/UCI HAR Dataset")
 {
+    library(plyr)
     full_path = paste(uci_dir, file_name, sep= "/")
     tidy_sensor_data <- tidyUCIHARDataSet()
-    sensor_avg_sub_act = ddply(tidy_sensor_data, c("Subject","Activity"), numcolwise(mean))
+    sensor_avg_sub_act = ddply(tidy_sensor_data, c("subject","activity"), numcolwise(mean))
     p("Saving tidy data to:", full_path)
     write.table(sensor_avg_sub_act, file = full_path, row.name=FALSE) 
 }
