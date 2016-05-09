@@ -65,7 +65,7 @@ The function tidyUCIHARDataSet
  
 
 For a more detailed description of the code see the following link.
-<a href="https://github.com/leedavies/ProgrammingAssignment2/blob/master/README.md">README.md</a>
+<a href="https://github.com/leedavies/getandcleandata/blob/master/README.md">README.md</a>
 
 ##Description of the variables in the tiny_data.txt file
 The script tidyUCIHARDataSet generates a data frame of 10299 obs. of 81 variables from the origional UCI Har Dataset.
