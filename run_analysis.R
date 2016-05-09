@@ -108,6 +108,7 @@ updateNames <- function(names)
     names <- gsub('^activity', "Activity", names)
     # convert all the "." seperators to "-"
     names <- gsub('\\.', "-", names)
+    names <- gsub('--', "-", names)
     # lower case all the names
     tolower(names)
 }
