@@ -35,16 +35,17 @@ Creating the tidy data set.
 
 Script Functions.
 =================
-<b>tidyUCIHARDataSet(uci_dir)</b><p>
+<b>tidyUCIHARDataSet(uci_dir)</b>
+
 Function to tidy the UCI HAR DataSet.<p>
-<b>parameters:</b><p>
-uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
-<p><b>return:</b><p>
-data.frame containing the tidy data for the UCI HAR DataSet
+> <b>parameters:</b><p>
+> uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
+> <p><b>return:</b><p>
+> data.frame containing the tidy data for the UCI HAR DataSet
 
 <b>writeAverageForVariableAndSubject(file_name, uci_dir)</b><p>
-This function runs the tidyUCIHARDataSet() function and outputs the results to the file specified in the file_name parameter.
-<p><b>parameters:</b><p>
-file_name - the name of the file to create, if no file is sepcified creates the file named "UCI_HAR_Dataset_Tidy_DataSet.txt"
-uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
+This function runs the tidyUCIHARDataSet() function and outputs the results to the file specified in the file_name parameter.<p>
+> <b>parameters:</b><p>
+> file_name - the name of the file to create, if no file is sepcified creates the file named "UCI_HAR_Dataset_Tidy_DataSet.txt"<p>
+> uci_dir - the path to the UCI HAR DataSet, if no directory is sepcified uses "./data/UCI HAR Dataset"
 
