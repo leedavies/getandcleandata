@@ -35,7 +35,6 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 Notes: 
-======
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
 
@@ -48,13 +47,18 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Clone this repository.
-Load the R source file using source('run_analysis.R')
-Run the tidyUCIHARDataSet() function to return data.frame of the tidy data.
-Run the writeAverageForVariableAndSubject() function to create a file containing the average of each variable for each activity and each subject.
+1. Clone this repository.
+2. Load the R source file using source('run_analysis.R')
+3. Run the tidyUCIHARDataSet() function to return data.frame of the tidy data.
+4. Run the writeAverageForVariableAndSubject() function to create a file containing the average of each variable for each activity and each subject.
 
 ###Cleaning of the data
-Short, high-level description of what the cleaning script does. 
+The function tidyUCIHARDataSet
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+ 
 
 For a more detailed description of the code see the following link.
 <a href="https://github.com/leedavies/ProgrammingAssignment2/blob/master/README.md">README.md</a>
