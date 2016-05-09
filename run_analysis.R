@@ -160,7 +160,7 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     p("Reading Features")
     features <- readFeatureFile(uci_dir)
     p("Reading Activity Labels")
-    activity_labels <- readActivityLables(uci_dir)
+    activity_labels <- readActivityLabels(uci_dir)
     
     # read the train data from the files
     train_sensor_data <- readData(uci_dir, "train")
@@ -183,9 +183,9 @@ tidyUCIHARDataSet <- function(uci_dir = "./data/UCI HAR Dataset")
     p("Extracting mean and standard deviation values")
     sensor_data_mean_std <- sensor_data[,grepl("mean|std|subject|activityid", names(sensor_data))]
     
-    p("Joining activity names to data")
-    # join on the activity id to get the activiy names
-    sensor_data_mean_std <- join(sensor_data_mean_std, activity_labels, by = "activityid", match = "first") 
+    p("Merging activity names to data")
+    # merging on the activity id to get the activiy names
+    sensor_data_mean_std <- merge(sensor_data_mean_std, activity_labels, by.x = "activityid", by.y="activityid", all = TRUE)
     
     #remove the activity id
     sensor_data_mean_std <- select(sensor_data_mean_std, -activityid)
